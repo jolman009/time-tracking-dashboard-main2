@@ -1,0 +1,133 @@
+:root {
+  --purple: #7c5cfc;
+  --orange: #ff9f5a;
+  --blue: #4cc9f0;
+  --pink: #ff5c8d;
+  --green: #2ecc71;
+  --dark-purple: #1e1b4b;
+  --text-color: #ffffff;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0f172a;
+  color: var(--text-color);
+  margin: 200px;
+  padding: 20px;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.active {
+  margin-top: 150px;
+  margin-bottom: 5px;
+
+}
+.card {
+  background-color: var(--dark-purple);
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.stat-card2 {
+  padding-top: 50px;
+  background-color: #2ecc71;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.stat-card {
+  padding-top: 40px; /* Increased padding to accommodate the icon */
+}
+
+
+
+.card-icon {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.profile-card {
+  grid-column: span 1;
+  grid-row: span 2;
+  background-color: var(--purple);
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.report-type {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.time-selector {
+  display: flex;
+  flex-direction: column;
+}
+
+.time-selector span {
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.time-selector span.active {
+  font-weight: bold;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.stat-comparison {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 5px;
+}
+
+.work { background-color: hsl(235, 52%, 37%); border-radius: 20px; border: 2px solid black;}
+.play { background-color: hsl(235, 46%, 20%); }
+.study { background-color: hsl(235, 46%, 20%); }
+.exercise { background-color: hsl(235, 46%, 20%); }
+.social { background-color: hsl(235, 46%, 20%); }
+.self-care { background-color:hsl(235, 46%, 20%); }
+
+.options {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
