@@ -1,147 +1,362 @@
 :root {
-  --purple: #7c5cfc;
-  --orange: #ff9f5a;
-  --blue: #4cc9f0;
-  --pink: #ff5c8d;
-  --green: #2ecc71;
-  --dark-purple: #1e1b4b;
-  --text-color: #ffffff;
-}
-
-body {
-  background-color: #0f172a;
-  color: var(--text-color);
-  margin: 200px;
-  padding: 20px;
-  font-family: "Rubik", sans-serif;
-}
-
-.dashboard {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.active {
-  margin-top: 150px;
-  margin-bottom: 5px;
-
-}
-.card {
-  background-color: var(--dark-purple);
-  border-radius: 15px;
-  padding: 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-
-.stat-card {
-  padding-top: 40px; /* Increased padding to accommodate the icon */
-}
-
-
-.card-icon2 {
-  position: absolute;
-  top: -10px;
-  right: 1px;
-  width: 230px;
-  height: 60px;
- 
-}
-
-.card-icon {
-  position: absolute;
-  top: -10px;
-  right: 20px;
-  width: 60px;
-  height: 60px;  
-}
-
-
-.profile-card {
-  grid-column: span 1;
-  grid-row: span 2;
-  background-color: var(--purple);
-}
-
-.profile-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.name {
-  font-size: 36px;
-  font-weight: 400;
-  margin-bottom: 5px;
-}
-
-.report-type {
-  font-size: 18px;
-  opacity: 0.8;
-  margin-bottom: 20px;
-}
-
-.time-selector {
-  display: flex;
-  flex-direction: column;
-}
-
-.time-selector span {
-  padding: 5px 0;
-  cursor: pointer;
-}
-
-.time-selector span.active {
-  font-weight: bold;
-}
-
-.stat-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.stat-title {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.stat-value {
-  font-size: 48px;
-  font-weight: 300;
-}
-
-.stat-comparison {
-  font-size: 14px;
-  opacity: 0.8;
-  margin-top: 5px;
-}
-
-.work { background-color: hsl(235, 52%, 37%); border-radius: 20px; border: 2px solid black;}
-.play { background-color: hsl(235, 46%, 20%); }
-.study { background-color: hsl(235, 46%, 20%); }
-.exercise { background-color: hsl(235, 46%, 20%); }
-.social { background-color: hsl(235, 46%, 20%); }
-.self-care { background-color:hsl(235, 46%, 20%); }
-
-
-.purple { background-color: hsl(264, 64%, 52%);}
-.green { background-color:hsl(145, 58%, 55%);}
-.red { background-color:hsl(348, 100%, 68%);}
-.blue { background-color: hsl(195, 74%, 62%);}
-.orange { background-color: hsl(15, 100%, 70%);}
-.yellow { background-color:hsl(43, 84%, 65%);}
-
-
-.options {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
+    --blue: hsl(246, 80%, 60%);
+    --red-work: hsl(15, 100%, 70%);
+    --blue-play: hsl(195, 74%, 62%);
+    --red-study: hsl(348, 100%, 68%);
+    --green-exercise: hsl(145, 58%, 55%);
+    --violet-social: hsl(264, 64%, 52%);
+    --orange-self-care: hsl(43, 84%, 65%);
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+    }
+    
+    *,
+    * ::before,
+    * ::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html:focus-within {
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        text-rendering: optimizeSpeed;
+        background-color: var(--very-dark-blue);
+        color: var(--pale-blue);
+        font-family: "Rubik", sans-serif;
+        font-size: 18px;
+        line-height: 1.5rem;
+        padding-top: 4rem;
+    }
+    
+    .profile-section {
+        background-color: var(--dark-blue);
+        border-radius: 0.75rem;
+    }
+    
+    .profile-section header {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--blue);
+        border-radius: 1rem;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        gap: 1rem;
+    }
+    
+    .profile-section header img {
+        width: 75px;
+        height: 75px;
+        border: 4px solid white;
+        border-radius: 50%;
+    }
+    
+    .profile-heading {
+        line-height: 1.5;
+    }
+    
+    .profile-section header p {
+        font-size: 18px;
+    }
+    
+    .profile-section header h1 {
+        font-size: 24px;
+        font-weight: 300;
+        color: white;
+    }
+    
+    .stat-controls {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .stat-controls button {
+        background-color: var(--dark-blue);
+        border: none;
+        border-radius: 1.5rem;
+        color: var(--pale-blue);
+        font-family: "Rubik", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        transition: color 0.3s;
+        cursor: pointer;
+    }
+    
+    .stat-controls button:hover {
+        color: white;
+    }
+    
+    .stat-controls button.selected {
+        color: white;
+    }
+    
+    .work-section, .play-section, .study-section, .exercise-section, .social-section, .self-care-section {
+        position: relative;
+        overflow: hidden;
+        padding-top: 0.5rem;
+    }
+    
+    .icon-banner {
+        background-color: var(--red-work);
+        border-radius: 0.75rem;
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .icon-banner img {
+        width: 80px;
+        height: auto;
+        position: relative;
+        top: -.75rem;
+        right: 1rem;
+    }
+    
+    .play-section .icon-banner {
+        background-color: var(--blue-play);
+    }
+    
+     .study-section .icon-banner {
+        background-color: var(--red-study);
+    }
+    
+    .exercise-section .icon-banner {
+        background-color: var(--green-exercise);
+    }
+    
+    .social-section .icon-banner {
+        background-color: var(--violet-social);
+    }
+    
+    .self-care-section .icon-banner {
+        background-color: var(--orange-self-care);
+    }
+    
+    
+    .section-article {
+        background-color: var(--dark-blue);
+        border-radius: .75rem;
+        padding: 1.5rem;
+        margin-top: 2.5rem;
+        z-index: 1;
+        position: relative;
+        line-height: 1.5;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .section-article:hover {
+        background-color: hsl(236, 45%, 40%);
+    }
+    
+    .section-head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .time-display {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .section-head h1 {
+        font-size: 18px;
+        font-weight: 400;
+        color: white;
+    }
+    
+    .section-head button {
+        display: flex;
+        border: none;
+        background-color: var(--dark-blue);
+        align-items: center;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        position: relative;
+    }
+    
+    .dots-svg.hover {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        position: absolute;
+    }
+    
+    .section-head button:hover .dots-svg {
+        opacity: 0;
+    }
+    
+    .section-head button:hover .dots-svg.hover {
+        opacity: 1;
+    }
+    
+    .current-span {
+        font-size: 2rem;
+        font-weight: 300;
+        color: white;
+    }
+    
+    .previous-span {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    
+    .attribution {
+        margin-top: 2rem;
+        font-size: x-small;
+        display: flex;
+        justify-content: center;
+    }
+    .attribution a {
+        text-decoration: none;
+        color: var(--green-exercise);
+    }
+    
+    .section-grid {
+        display: grid;
+        overflow: hidden;
+        gap: 1rem;
+        grid-auto-columns: 1fr;
+        grid-template-areas:
+            'one'
+            'two'
+            'three'
+            'four'
+            'five'
+            'six'
+            'seven';
+    }
+    
+    .profile-section {
+        grid-area: one;
+    }
+    
+    .work-section {
+        grid-area: two;
+    }
+    
+    .play-section {
+        grid-area: three;
+    }
+    
+    .study-section {
+        grid-area: four;
+    }
+    
+    .exercise-section {
+        grid-area: five;
+    }
+    
+    .social-section {
+        grid-area: six;
+    }
+    
+    .self-care-section {
+        grid-area: seven;
+    }
+    
+    @media screen and (min-width: 426px) {
+        .section-grid {
+            grid-template-areas:
+            "one one"
+            "two three"
+            "four five"
+            "six seven";
+        }
+    
+        .section-article {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .time-display {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    
+    @media screen and (min-width: 769px) {
+        body {
+            padding: 0;
+        }
+        .profile-section header {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-bottom: 4rem;
+        }
+    
+        .profile-section header img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 1rem;
+        }
+    
+        .profile-section header p {
+            font-size: 14px;
+        }
+    
+        .profile-section header h1 {
+            font-size: 30px;
+            font-weight: 300;
+            line-height: 1.2;
+        }
+    
+        .profile-section header h1 span {
+            display: block;
+        }
+    
+        .stat-controls {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .section-article {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+    
+        .section-grid {
+            grid-template-areas:
+                "one two three four"
+                "one five six seven";
+        }
+    
+        .section-head h1 {
+            margin-right: 4rem;
+        }
+        
+        .time-display {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .current-span {
+            font-size: 2.5rem;
+        }
+    
+        .previous-span {
+            font-size: 0.75rem;
+        }
+    }
