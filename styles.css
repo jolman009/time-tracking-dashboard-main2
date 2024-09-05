@@ -9,11 +9,11 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
   background-color: #0f172a;
   color: var(--text-color);
   margin: 200px;
   padding: 20px;
+  font-family: "Rubik", sans-serif;
 }
 
 .dashboard {
@@ -36,26 +36,30 @@ body {
   position: relative;
   overflow: hidden;
 }
-.stat-card2 {
-  padding-top: 50px;
-  background-color: #2ecc71;
-  grid-column-start: 2;
-  grid-row-start: 2;
-}
+
 
 .stat-card {
   padding-top: 40px; /* Increased padding to accommodate the icon */
 }
 
 
+.card-icon2 {
+  position: absolute;
+  top: -10px;
+  right: 1px;
+  width: 230px;
+  height: 60px;
+ 
+}
 
 .card-icon {
   position: absolute;
   top: -10px;
   right: 20px;
   width: 60px;
-  height: 60px;
+  height: 60px;  
 }
+
 
 .profile-card {
   grid-column: span 1;
@@ -71,13 +75,13 @@ body {
 }
 
 .name {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 36px;
+  font-weight: 400;
   margin-bottom: 5px;
 }
 
 .report-type {
-  font-size: 14px;
+  font-size: 18px;
   opacity: 0.8;
   margin-bottom: 20px;
 }
@@ -107,8 +111,8 @@ body {
 }
 
 .stat-value {
-  font-size: 36px;
-  font-weight: bold;
+  font-size: 48px;
+  font-weight: 300;
 }
 
 .stat-comparison {
@@ -124,6 +128,15 @@ body {
 .social { background-color: hsl(235, 46%, 20%); }
 .self-care { background-color:hsl(235, 46%, 20%); }
 
+
+.purple { background-color: hsl(264, 64%, 52%);}
+.green { background-color:hsl(145, 58%, 55%);}
+.red { background-color:hsl(348, 100%, 68%);}
+.blue { background-color: hsl(195, 74%, 62%);}
+.orange { background-color: hsl(15, 100%, 70%);}
+.yellow { background-color:hsl(43, 84%, 65%);}
+
+
 .options {
   position: absolute;
   top: 10px;
@@ -131,3 +144,4 @@ body {
   font-size: 20px;
   cursor: pointer;
 }
+
